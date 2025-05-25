@@ -1,0 +1,15 @@
+<mat-card class="details-card" *ngIf="serie">
+  <mat-card-title>{{ serie.titre }} ({{ serie.annee }})</mat-card-title>
+  <mat-card-subtitle>{{ serie.genre }} • {{ serie.saisons }} saisons</mat-card-subtitle>
+
+  <mat-card-content>
+    <p>{{ serie.synopsis }}</p>
+    <p><strong>Note :</strong> {{ serie.note }}/5</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="marquerVue()" [disabled]="estVue">
+      {{ estVue ? 'Déjà vu ✅' : 'Marquer comme vu' }}
+    </button>
+  </mat-card-actions>
+</mat-card>

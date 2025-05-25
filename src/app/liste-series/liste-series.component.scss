@@ -1,0 +1,18 @@
+.liste-series {
+  padding: 20px;
+}
+
+.filtres {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  background: #f3e5f5;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+button {
+  align-self: flex-start;
+  margin-top: 10px;
+}

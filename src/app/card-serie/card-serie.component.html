@@ -1,0 +1,30 @@
+<mat-card class="card-serie">
+  <mat-card-title>{{ serie.titre }} ({{ serie.annee }})</mat-card-title>
+  <mat-card-subtitle>{{ serie.genre }}</mat-card-subtitle>
+  <mat-card-subtitle>Saisons : {{ serie.saisons }}</mat-card-subtitle>
+
+  <mat-card-content>
+    <p>
+      {{ isTruncated ? (serie.synopsis | slice:0:100) + '...' : serie.synopsis }}
+      <button mat-button (click)="toggleSynopsis()">
+        {{ isTruncated ? 'Lire plus' : 'Réduire' }}
+      </button>
+    </p>
+    <p class="note">
+      <mat-icon>star</mat-icon> {{ serie.note }}/5
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button
+        color="accent"
+        [disabled]="estVue()"
+        (click)="marquerVue()">
+        {{ estVue() ? 'Déjà vu' : 'Vu !' }}
+    </button>
+  
+  <a mat-button color="primary" [routerLink]="['/series', serie.id]">Détails</a>
+
+
+  </mat-card-actions>
+</mat-card>

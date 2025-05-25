@@ -1,0 +1,22 @@
+<section class="stats">
+  <h2>📊 Statistiques de mes séries</h2>
+
+  <p>Total de séries : <strong>{{ total() }}</strong></p>
+  <p>Séries vues : <strong>{{ totalVues() }}</strong></p>
+  <p>Moyenne des notes : <strong>{{ moyenneNote() }}/5</strong></p>
+
+  <h3>Répartition par genre :</h3>
+  <ul>
+    <li *ngFor="let genre of genres()">
+      {{ genre[0] }} : {{ genre[1] }}
+    </li>
+  </ul>
+
+  <h3>Camembert interactif :</h3>
+  <canvas
+    *ngIf="isBrowser"
+    baseChart
+    [data]="pieChartData()"
+    [type]="pieChartType"
+  ></canvas>
+</section>

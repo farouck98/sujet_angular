@@ -1,0 +1,26 @@
+.details-card {
+  margin: 40px auto;
+  max-width: 600px;
+  background: #f3e5f5;
+  padding: 20px;
+
+  mat-card-title {
+    color: #9c27b0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  mat-card-subtitle {
+    margin-bottom: 12px;
+    color: #6a1b9a;
+  }
+
+  mat-card-content {
+    font-size: 16px;
+    color: #333;
+  }
+
+  mat-card-actions {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,27 @@
+.card-serie {
+  margin-bottom: 20px;
+  background: #f3e5f5; // Magenta clair
+}
+
+mat-card-subtitle {
+  color: #4a148c; // Violet foncé pour bon contraste
+  font-weight: 500;
+}
+
+button[disabled] {
+  opacity: 1 !important;           // ne pas rendre le texte gris clair
+  color: white !important;         // texte bien lisible
+  background-color: #4caf50 !important; // vert validé
+  border: none;
+}
+.note {
+  display: flex;
+  align-items: center;
+  color: #9c27b0;
+  font-weight: bold;
+
+  mat-icon {
+    margin-right: 4px;
+    color: #9c27b0;
+  }
+}

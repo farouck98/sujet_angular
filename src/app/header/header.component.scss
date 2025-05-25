@@ -1,0 +1,25 @@
+.toolbar {
+  background-color: #9c27b0; // Magenta/Violet
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+a.active-link {
+  border-bottom: 2px solid white;
+}

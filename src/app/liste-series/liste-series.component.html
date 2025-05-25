@@ -1,0 +1,37 @@
+<div class="liste-series">
+
+  <!-- 🎚️ Filtres -->
+  <div class="filtres">
+    <mat-form-field appearance="fill">
+      <mat-label>Genre</mat-label>
+      <mat-select [value]="genreFiltre()" (selectionChange)="genreFiltre.set($event.value)">
+        <mat-option *ngFor="let genre of genresDisponibles()" [value]="genre">
+          {{ genre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+   <label>Note minimale : {{ noteMinFiltre() }}</label>
+<mat-slider min="0" max="5" step="1" tickInterval="1">
+  <input
+    matSliderThumb
+    type="number"
+    [value]="noteMinFiltre()"
+    (input)="noteMinFiltre.set(+$any($event.target).value)"
+
+  />
+</mat-slider>
+
+<button mat-button color="warn" (click)="resetFiltres()">
+  Réinitialiser les filtres
+</button>
+
+
+  </div>
+
+  <!-- 📺 Liste des séries filtrées -->
+  <app-card-serie
+    *ngFor="let serie of series()"
+    [serie]="serie"
+  ></app-card-serie>
+</div>
